@@ -11,20 +11,20 @@
  */
 class Solution {
 public:
-    
-    int f(TreeNode * root , int &ans){
-        if(root ==NULL)return 0;
-        int lh = max(0 , f(root ->left, ans));
-        int rh = max(0 ,f(root->right , ans));
-        ans = max(ans , root->val + lh + rh);
-        return root->val + max(lh,rh);
+    int helper(TreeNode * root , int &ans){ // this fnc calc single path lh or rh maxi
         
+        
+        // ans stores the /\ path we can do this cuz we are taking maxi of 0 with both of the single path \ or / to avoi -ve paths
+        if(root == NULL)return 0;
+        int lh = max(0 , helper(root->left, ans));
+        int rh = max(0 , helper(root->right, ans));
+        ans = max(ans , root->val + lh + rh);
+       
+        return root->val + max(lh , rh);
     }
-    
-    
     int maxPathSum(TreeNode* root) {
-        int ans = INT_MIN;
-        f(root , ans);
+      int ans = INT_MIN ;
+        helper(root , ans );
         return ans;
     }
 };
