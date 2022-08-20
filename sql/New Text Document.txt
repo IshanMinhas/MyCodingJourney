@@ -1,0 +1,1072 @@
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INSERT ALL
+
+
+
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 1 , 'elektra' , 'min', 25) 
+into S2(student_id ,f_name, l_name ,age) values( 1 , 'elektra' , 'min', 25)
+select * from dual;
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S1";
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S2";
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ UPDATE
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+
+update S1 
+set age = 46
+where student_id >= 7;
+
+
+update S1 
+set age = 90 ,  l_name = 'memem'
+where f_name = 'rlektra';
+
+-- update data with the help of data from another table
+----update S1
+----set f_name = (select f_name from S2 where rownum = 1);
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S1";
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S2";
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+BETWEEN
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+
+update S1 
+set age = 46
+where student_id >= 7;
+
+
+update S1 
+set age = 90 ,  l_name = 'memem'
+where f_name = 'rlektra';
+
+-- update data with the help of data from another table
+----update S1
+----set f_name = (select f_name from S2 where rownum = 1);
+
+select  * from s1 
+where age BETWEEN 40 and 85;
+
+
+
+select  * from s1 
+where age NOT BETWEEN 40 and 85;
+
+
+delete from S1
+where age between 10 and 20;
+
+--insert into  another table
+--insert into S2(select  * from s1 
+--where age BETWEEN 40 and 85;);
+
+-- for date it's like this
+--select  * from s1 
+--where date BETWEEN TO_DATE () and TO_DATE ();
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S1";
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S2";
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+DELETE 
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+
+
+-- 1 condi
+delete from S1 
+where f_name = 'llektra';
+
+
+--both cond satisfied will work
+delete from S1 
+where age = 21 and f_name ='ishan';
+
+-- 1 condi satisfied will work
+delete from S1 
+where age = 21 or f_name ='ishan';
+
+
+-- delete from S1
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S1";
+
+select 
+    "STUDENT_ID",
+    "F_NAME",
+    "L_NAME",
+    "AGE"
+from "S2";
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ALTER MODIFY RENAME
+
+
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+
+-- this command will not work cuz lname already has varchar elements but if it was empty then this command would have worked
+--alter table S1 modify(f_name Varchar(56) ,l_name int );
+-- rename
+alter table S1 rename column student_id to idd;
+
+
+
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+LIKE STRING MATCHING BASICALLY
+
+
+drop table S1 ;
+create table S1(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+
+
+
+-- select any col 
+--select student_id from S1
+--where f_name like '%e%';
+
+
+-- display name , hire dateof employee whose dob is in dex
+--select emp_name , Hire_date from S3
+--where date like '%dec%';
+
+
+-- only 5 letter name
+select student_id from S1
+where f_name like '_____';
+
+
+select student_id from S1
+where f_name not like '_____';
+
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT,
+    DOB date,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+insert all
+into S3(student_id ,f_name, l_name ,age, DOB ) values(10 , 'ikki ', 'pra', 45 , '19-jul-1666' )
+into S3(student_id ,f_name, l_name ,age, DOB) values( 4 , 'elektra' , 'min', 25, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 6 , 'rlektra' , 'min', 45, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 7 , 'llektra' , 'min', 65, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 2 , 'ylektra' , 'min', 85, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 3 , 'mlektra' , 'min', 25, '19-jul-1666' )
+select * from dual;
+drop table s4;
+create table s4 as
+(select * from  S1);
+desC s3;
+
+drop table S5;
+create table S5 as (select f_name , DOB from S3 where student_id > 4);
+ 
+
+
+
+drop table s6;
+create table s6 as
+(select  student_id , DOB from s1 , s3 where student_id = 10 and student_id = idd);
+
+select * from S5;
+select  * from S4;
+select  * from S3;
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IN
+
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT,
+    DOB date,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+select * from dual;
+
+insert all
+into S3(student_id ,f_name, l_name ,age, DOB ) values(10 , 'ikki ', 'pra', 45 , '19-jul-1666' )
+into S3(student_id ,f_name, l_name ,age, DOB) values( 4 , 'elektra' , 'min',  , '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 6 , 'rlektra' , 'min', 45, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 7 , 'llektra' , 'min', 65, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 2 , 'ylektra' , 'min', 85, '19-jul-1666' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 3 , 'mlektra' , 'min', 25, '19-jul-1666' )
+select * from dual;
+
+
+ 
+
+
+
+
+
+  
+
+
+select * from S1 where
+f_name In('rmoo' , 'elektra' , 'Ishan' );
+
+
+
+select * from S1 where
+f_name not In('rmoo' , 'elektra' , 'Ishan' );
+
+delete from S1 where f_name in('Ishan ' , 'romooo');
+
+
+select max(age) from S1 where
+age not In(select max(age) from S1);
+
+
+
+select  * from S3;
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GROUP BY HAVING
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT,
+    DOB date,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id ,f_name, l_name ,age, DOB ) values(10 , 'ikki ', 'pra', 45 , '19-jul-1666' )
+into S3(student_id ,f_name, l_name ,age, DOB) values( 4 , 'elektra' , 'min', 25, '19-jul-1656' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 6 , 'rlektra' , 'min', 45, '19-jul-1645' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 7 , 'llektra' , 'min', 65, '19-jul-1633' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 2 , 'ylektra' , 'min', 85, '19-jul-1631' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 3 , 'mlektra' , 'min', 25, '19-jul-1612' )
+select * from dual;
+
+
+ 
+
+--select age, count(*) as countt from S1
+--group by age;
+
+--select l_name , count(*) as countt from S1
+--group by l_name;
+
+--select l_name , max(age) as maxage , min(age) as minage from S1
+--group by l_name;
+
+
+--select l_name , count(*) from S1
+--group by l_name 
+--having count(age) > 3;
+
+
+--select l_name , count(*) from S1
+--group by l_name 
+--having l_name = 'pra';
+
+
+
+--select  sum(age) as summm , l_name  from S1 
+--group by l_name
+--hAVING  sum(age) = 45;
+
+select to_char(DOB , 'YYYY') as dobb , count(*) as countt
+from S3
+group by to_char(DOB , 'YYYY')
+having to_char(DOB , 'YYYY') = '1633';
+
+
+
+
+
+ 
+
+
+
+select  * from S3;
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ORDER BY
+
+
+
+
+
+
+
+
+
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT,
+    DOB date,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id ,f_name, l_name ,age, DOB ) values(10 , 'ikki ', 'pra', 45 , '19-jul-1666' )
+into S3(student_id ,f_name, l_name ,age, DOB) values( 4 , 'elektra' , 'min', 25, '19-jul-1656' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 6 , 'rlektra' , 'min', 45, '19-jul-1645' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 7 , 'llektra' , 'min', 65, '19-jul-1633' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 2 , 'ylektra' , 'min', 85, '19-jul-1631' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 3 , 'mlektra' , 'min', 25, '19-jul-1612' )
+select * from dual;
+
+
+ select * from S1
+ where age = 45
+order by f_name;
+
+
+-- col no
+select * from S1
+order by 2;
+
+
+
+select f_name, age * 12 as ann  from S1
+order by ann ;
+
+select f_name , l_name, age 
+from S1 
+order by age desc;
+
+-- sorting bascially
+select * from S1
+order by f_name;
+
+
+select * from S1
+order by l_name desc , age desc;
+
+select * from S3
+order by dob;
+
+
+
+
+
+ 
+
+
+
+select  * from S3;
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+WHERE
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT,
+    DOB date,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id ,f_name, l_name ,age, DOB ) values(10 , 'ikki ', 'pra', 45 , '19-jul-1666' )
+into S3(student_id ,f_name, l_name ,age, DOB) values( 4 , 'elektra' , 'min', 25, '19-jul-1656' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 6 , 'rlektra' , 'min', 45, '19-jul-1645' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 7 , 'llektra' , 'min', 65, '19-jul-1633' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 2 , 'ylektra' , 'min', 85, '19-jul-1631' ) 
+into S3(student_id ,f_name, l_name ,age, DOB) values( 3 , 'mlektra' , 'min', 25, '19-jul-1612' )
+select * from dual;
+
+
+ select * from S1
+ where l_name = 'min';
+select * from S1
+ where l_name != 'min';
+
+ -- between can be used for values between a range along with where
+
+
+
+select  * from S3;
+select 
+  *
+from "S1";
+
+select 
+*
+from "S2";
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+join
+
+
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    marks INT , 
+    DoB date ,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id , marks , DOB ) values(10 , 45 , '19-jul-1666' )
+into S3(student_id , marks ,  DOB) values( 4 , 25, '19-jul-1656' ) 
+into S3(student_id ,marks ,  DOB) values( 6 ,  45, '19-jul-1645' ) 
+into S3(student_id ,marks ,  DOB) values( 7 , 65, '19-jul-1633' ) 
+into S3(student_id ,marks ,  DOB) values( 2 , 3, '19-jul-1631' ) 
+into S3(student_id ,marks ,  DOB) values( 3 ,  10, '19-jul-1612' )
+select * from dual;
+
+
+--- self join
+select distinct e1.student_id 
+from S1 as e1 inner join S1 as  e2 
+on (e1.student_id = e2.student_id 
+and e1.f_name <> e2.f_name); 
+--select * from S1 Cross join S3;
+
+--select  * from  S1 Inner Join S3 on (S1.student_id  = S3.student_id);
+-- where can also be used here
+--select * from S1 , S3 where S1.student_id = s3.student_id;
+
+
+-- select * from S1 NATURAL jOIN S3;
+
+-- select  * from S1 left outer join S3 on S1.student_id = S3.student_id;
+-- select  * from S1 right outer join S3 on S1.student_id = S3.student_id;
+--select  * from S1 full outer join S3 on S1.student_id = S3.student_id;
+
+-- FULL OUTER JOIN that do not support full outer join 
+--select  * from S1 left outer join S3 on S1.student_id = S3.student_id UNION 
+--select  * from S1 right outer join S3 on S1.student_id = S3.student_id;
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUBQ
+
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    marks INT , 
+    DoB date ,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id , marks , DOB ) values(10 , 45 , '19-jul-1666' )
+into S3(student_id , marks ,  DOB) values( 4 , 25, '19-jul-1656' ) 
+into S3(student_id ,marks ,  DOB) values( 6 ,  45, '19-jul-1645' ) 
+into S3(student_id ,marks ,  DOB) values( 7 , 65, '19-jul-1633' ) 
+into S3(student_id ,marks ,  DOB) values( 2 , 3, '19-jul-1631' ) 
+into S3(student_id ,marks ,  DOB) values( 3 ,  10, '19-jul-1612' )
+select * from dual;
+
+
+-- subq in 1 table
+select f_name ,age from S1 where                  
+age = (select max(age) from S1); 
+
+
+
+-- subq from 2 tables
+select * from S1 where student_id Not in 
+(select student_id from S3);
+
+select f_name from S1 where age= (select max(age) from S1 where age not in (select max(age) from S1));
+
+select * from S1 where age = 
+(select min(age) from S1 where Age in  
+(select distinct age from S1 order by age desc fetch first 5 rows only)) ;
+
+-- select * from S1 where age = 
+-- (select min(age) from S1 where Age in  
+-- (select top  5 distinct age from S1 order by age desc)) ;
+
+
+select * from S1 where
+age >  
+(select avg(age) from S1 );
+
+select  * from S1 where age  > aLL (select avg(age) from S1 group by l_name); 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CORRELATIONAL SUBQ
+
+drop table S1 ;
+create table S1(
+    student_id INT  primary key , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+drop table S2 ;
+create table S2(
+    student_id INT , 
+    f_name varchar(21), 
+    l_name varchar(21),
+    age INT
+);
+
+
+drop table S3 ;
+create table S3(
+    student_id INT , 
+    marks INT , 
+    DoB date ,
+    primary key(student_id)
+);
+
+
+insert all
+into S1(student_id ,f_name, l_name ,age ) values(10 , 'ikki ', 'pra', 45)
+into S1(student_id ,f_name, l_name ,age) values( 4 , 'elektra' , 'min', 25) 
+into S1(student_id ,f_name, l_name ,age) values( 6 , 'rlektra' , 'min', 45) 
+into S1(student_id ,f_name, l_name ,age) values( 7 , 'llektra' , 'min', 65) 
+into S1(student_id ,f_name, l_name ,age) values( 2 , 'ylektra' , 'min', 85) 
+into S2(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ,age) values( 3 , 'mlektra' , 'min', 25)
+into S1(student_id ,f_name, l_name ) values( 45 , 'ektra' , 'min')
+select * from dual;
+
+insert all
+into S3(student_id , marks , DOB ) values(10 , 45 , '19-jul-1666' )
+into S3(student_id , marks ,  DOB) values( 4 , 25, '19-jul-1656' ) 
+into S3(student_id ,marks ,  DOB) values( 6 ,  45, '19-jul-1645' ) 
+into S3(student_id ,marks ,  DOB) values( 7 , 65, '19-jul-1633' ) 
+into S3(student_id ,marks ,  DOB) values( 2 , 3, '19-jul-1631' ) 
+into S3(student_id ,marks ,  DOB) values( 3 ,  10, '19-jul-1612' )
+select * from dual;
+
+
+select f_name from S1 where age > (select avg(age) from S1) ;
+
+select f_name , age , (select avg(age) from S1 as e1 where e2.student_id = e1.student_id) from S1 as e1 ; 
+select f_name, student_id from S1 as E1 where age > (select avg(age) from S1 where student_id = e1.student_id) ;

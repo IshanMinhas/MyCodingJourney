@@ -1,4 +1,4 @@
-https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw
+//https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw
 // DO MISC
 
 // Q1 Is it possible for a class to inherit the constructor of its base class ?
@@ -15,4 +15,4 @@ https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSg
 // -> for destructor it is opposite
 
 // Singleton pattern example.
-//-> Singleton is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.
+//Singleton is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.

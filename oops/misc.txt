@@ -1,0 +1,187 @@
+1) Why Java is not a Pure Object Oriented Language?
+-> All predefined types are not objects , All operations performed on objects are not only through methods exposed at the objects.
+
+
+2) Is an array a primitive type or an object in Java?
+-> object
+
+
+3) what is early and late binding ? 
+->The short answer is that early (or static) binding refers to compile time binding and late (or dynamic) binding refers to runtime binding (for example when you use reflection).
+
+
+4) What is the default access modifier of a class?
+-> private
+
+
+5) Can we create instance to abstract class?
+-> No you can’t,
+
+
+6) C++ supports manual memory management so it doesnt need GARBAGE COLLECTOR but java does.
+Java garbage collection is the process by which Java programs perform automatic memory management.
+When Java programs run on the JVM, objects are created on the heap, 
+which is a portion of memory dedicated to the program. Eventually, some objects will no longer be needed. 
+The garbage collector finds these unused objects and deletes them to free up memory.
+garbage collection is automatic, Although there are many JVMs, Oracle’s HotSpot is by far the most common.
+
+
+
+7) What are manipulators?
+-> Manipulators are helping functions that can modify the input/output stream. 
+It does not mean that we change the value of a variable, 
+it only modifies the I/O stream using insertion (<<) and extraction (>>) operators.
+eg - cout<<setbase(16)<<100 
+
+
+8) Java finally block
+Java finally block is a block used to execute important code such as closing the connection, etc.
+
+
+9) final keyword
+->  Using the final keyword means that the value can’t be modified in the future. 
+
+
+10) what is exception? 
+- > An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions
+ during the execution of a program
+ 
+ 
+ 11) What is the difference between error and an exception?
+ -> Broadly speaking an error in a program code can be classified into two categories -
+Semantic Errors
+Syntactic Errors
+Semantic Errors are also known as logical errors. And although the program will compile 
+successfully you will not get the desired output upon running it because of the flaw in your logic.
+Syntactic errors - when you break the syntax of a Language
+Exceptions are also known as run-time errors.
+ Exception is also an error. But it's not detected during compilation phase unlike 
+ Syntactic errors and also they don't execute normally during run time, unlike semantic Errors. 
+ These errors are detected only during runtime and prevent the normal execution of a program.
+
+
+
+
+ 12) Try catch block Java
+ -> The try block contains set of statements where an exception can occur.
+ A catch block is where you handle the exceptions, this block must follow the try block
+ 
+ 
+ 
+ 
+ 13) Java finalize method 
+ - >This method is called just before an object is garbage collected. finalize() method 
+ overrides to dispose system resources, perform clean-up activities and minimize memory leaks.
+ 
+ 
+ 
+ 14) what is token ?
+ A token is the smallest element of a program that is meaningful to the compiler. 
+ Tokens can be classified as follows:  
+
+Keywords
+Identifiers
+Constants
+Strings
+Special Symbols
+Operators
+
+
+
+15) ternary operator? 
+- >Programmers use the ternary operator for 
+decision making in place of longer if and else conditional statements.
+
+
+
+
+16) enum in c? 
+->  used to assign names to integral constants
+
+
+
+17)when to use struct ?  
+structs can have methods.
+structs cannot be inherited
+use them when you need lightweight objexts
+
+
+
+18 )  what is the diff b/w cohesion and coupling? 
+Good software design has high cohesion and low coupling.
+Cohesion refers to what the class (or module) can do. 
+Low cohesion would mean that the class does a great variety of actions - 
+High cohesion means that the class is focused on what it should be doing.
+coupling means  how related or dependent two classes/modules are toward each other. 
+
+
+
+19) Super Keyword in Java
+Super is a keyword. It is used inside a sub-class method definition to call a method defined in the super class.
+
+
+
+
+20) this keyword 
+pointer to curr object
+
+
+
+21) Explicit Keyword in C++ is used to mark constructors to not implicitly convert types in C++
+
+
+
+
+22 )Static variables in a Function: When a variable is declared as static, space for it gets allocated for the lifetime of the program
+Static variables in a class: As the variables declared as static are initialized only once as they are allocated space in separate static storage so, 
+the static variables in a class are shared by the objects. 
+
+
+
+23) New Keyword - Use of the new operator signifies a request for the memory allocation on the heap.
+
+
+24) abstract Keywords
+ No, C++ does not use the abstract keyword to describe abstract classes. 
+ But, just because C++ does not use the abstract keyword, that does not mean that it 
+ doesn't have abstract classes. 
+ In C++, abstract classes are created through the use of pure virtual functions.
+
+
+
+
+ 25) const keyword  
+
+
+
+
+
+
+
+ 26) structure padding 
+ it was introduced to save the number of cpu cycles.
+ adds the one or more empty bytes between the memory addresses to align the data in memory.
+ struct student  
+{  
+   char a;  
+   char b;  
+   int c;  
+} stud1; 
+we think the ans is 6 bytes but its actually 8 bytes
+
+
+27) Packing, on the other hand prevents compiler from doing padding - this has to be explicitly requested 
+
+
+
+28) intialization list
+syntax -> 
+constructor(int i , int j  ) : intialization section// a(i) , b(j) // 
+{
+    assignment + code;
+}
+// jo cheez pehle declare hoti hai wo cheez pehle initialize hoti hai
+
+
+29) const keyword
+its a promise to keep something constant
