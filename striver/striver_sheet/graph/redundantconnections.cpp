@@ -1,13 +1,16 @@
+#include<iostream> 
+#include<bits/stdc++.h>
+using namespace std;
 class DSU {
 private:
-	vector<int> parent, size, rank;
+	vector<int> parent, size;
 
 public:
 	DSU(int n) {
 		for (int i = 0; i <= n; i++) {
 			parent.push_back(i);
 			size.push_back(1);
-			rank.push_back(0);
+			
 		}
 	}
 
@@ -40,29 +43,6 @@ public:
 		else {
 			parent[pv] = pu;
 			size[pu] += size[pv];
-		}
-	}
-public:
-	void unionRank(int u, int v) {
-		int pu = findPar(u);
-		int pv = findPar(v);
-		if (pu == pv) {
-			return;
-		}
-
-		// pu chota
-		// pu ko zod pv me
-		// pv bolega me bada hogaya re baba, mera size badha de
-		if (rank[pu] < rank[pv]) {
-			parent[pu] = pv;
-		}
-		else if (rank[pv] < rank[pu]) {
-			parent[pv] = pu;
-		}
-		// rank is equal, in case of equal then increase
-		else {
-			parent[pu] = pv;
-			rank[pv]++;
 		}
 	}
 };
