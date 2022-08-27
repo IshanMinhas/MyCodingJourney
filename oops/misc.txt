@@ -185,3 +185,16 @@ constructor(int i , int j  ) : intialization section// a(i) , b(j) //
 
 29) const keyword
 its a promise to keep something constant
+
+What is the use of ‘finalize’?
+Finalize as an object method used to free up unmanaged resources and cleanup before Garbage Collection(GC). It performs memory management tasks
+
+
+What is Garbage Collection(GC)?
+GC is an implementation of automatic memory management. The Garbage collector frees up space occupied by objects that are no longer in existence.
+
+
+
+
+What is a final variable?
+A variable whose value does not change. It always refers to the same object by the property of non-transversity.
