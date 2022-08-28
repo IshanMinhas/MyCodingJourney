@@ -33,7 +33,7 @@ public:
         });
     }
     ans = max(ans, rightMost - leftMost + 1);
-  }
+    }
   return ans;
 
 
