@@ -115,7 +115,7 @@ struct Node{
     Node * res = temp;    
     while(head1 != NULL and head2!= NULL ){       
         if(head1->data < head2->data){
-            tem     p->bottom = head1;
+            temp->bottom = head1;
             temp = temp->bottom;
             head1 = head1->bottom;
         }else{

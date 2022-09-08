@@ -3,12 +3,12 @@ using namespace std;
 
 void update(int **p2) {
     //p2 = p2 + 1;
-    //kuch change hoga  - NO
+    //kuch change hoga  - NO // IMPortant
 
-    //*p2 = *p2 + 1;
+    *p2 = *p2 + 1;
     //kuch change hoga - YES
 
-    **p2 = **p2 + 1;
+    //**p2 = **p2 + 1;
     //kuch change hoga - YES
 }
     void update(int *p){
@@ -18,7 +18,7 @@ void update(int **p2) {
         ++(**p);
     }
 int main() {
-/*
+
     int i = 5;
     int* p = &i;
     int** p2 = &p;
@@ -45,15 +45,17 @@ int main() {
     cout<< "after " << p << endl;
     cout<< "after " << p2 << endl;
     cout << endl << endl;
-    */
+    
 
 
 
 
-        int num = 110;
-        int *ptr = &num;
-        increment(&ptr);
-        cout << num << endl;
+        // int num = 110;
+        // int *ptr = &num;
+        // int ** ptr2 = &ptr;
+        // // update(ptr);
+        // //increment(ptr2);
+        // cout << num << endl;
 
 
 

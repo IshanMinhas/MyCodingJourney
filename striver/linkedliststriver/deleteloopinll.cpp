@@ -80,7 +80,7 @@ class Solution
     void removeLoop(Node* head)
     {
         // code here
-        // just remove the loop without losing any nodes
+        // just re move the loop without losing any nodes
         
 
         if(head == NULL or head->next == NULL)return;

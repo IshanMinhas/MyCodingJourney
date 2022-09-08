@@ -9,7 +9,7 @@ class A {
     }
     
     int sayHello(char name) {
-        cout << "Hello Love Babbar" << endl;
+        cout << "Hello Babbar" << endl;
         return 1;
     }
 
@@ -29,16 +29,17 @@ class B {
         return a+b;
     }
 
-    void operator+ (B &obj) {
-/*        int value1 = this -> a;
-        int value2 = obj.a;
-        cout << "output " << value2 - value1 << endl; 
-        */
+    void operator + (B &obj ) {
+        int val1 = this->a;
+        int val2 = obj.a;
+      
+        cout << val2 - val1 <<endl;
+
        cout << "Hello Babbar" << endl;
     }
 
     void operator() () {
-        cout << "main Bracket hu " << this->a << endl;
+        cout << "main Bracket hu " << this->b << endl;
     }
 
 };
@@ -64,20 +65,22 @@ class Dog: public Animal {
 
 int main() {
 
-    Dog obj;
-    obj.speak();
+    // Dog obj;
+    // obj.speak();
 
 
 
 
-/*
+
     B obj1, obj2;
 
     obj1.a = 4;
     obj2.a = 7;
-
+    obj1.b = 7;
+    cout << obj1.add() <<endl;
+    
     obj1 + obj2;
-    obj1();*/
+    obj1();
 
 
 
@@ -86,11 +89,11 @@ int main() {
 
 // Function Overloading
 
-/*
-    A obj;
-    obj.sayHello();
-    */
+
+    // A obj;
+    // obj.sayHello( 1);
+    
 
 
-    return 0;
+    // return 0;
 }

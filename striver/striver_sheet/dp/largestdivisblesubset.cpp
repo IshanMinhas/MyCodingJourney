@@ -31,3 +31,33 @@ public:
 	return temp;
     }
 };
+/*
+sort();
+
+int f(){
+    vector<int> dp(n), hash(n);
+    int last = 0;
+    for(int i = 0;i < n ;i++){
+        hash[i] = i;
+        for(int j = 0 ; j < i; j++){
+            if(nums[i]%nums[j]== 0){
+                if(1+dp[j] > dp[i]){
+                    dp[i] = 1+dp[i]; 
+                };
+            }
+        }
+        if(dp[i] > maxi){
+            maxi = dp[i];
+            last = i ;
+        }
+ 
+    }
+
+    int i = find(vec.begin , veec.end , maxi );
+    ans.push_back(nums[lasti]);
+    while(lasti){
+        lasti = hash[lasti];
+        nums.push_back(nums[lasti]);
+    }
+*/
+}
