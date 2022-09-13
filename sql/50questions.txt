@@ -255,6 +255,7 @@ select * from city where country_id NOT IN  (Select country_id from country)
 
 
 
+
 -- Q-31. Write an SQL query to show the current date and time.
 -- DUAL
 select curdate();

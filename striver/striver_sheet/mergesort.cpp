@@ -2,42 +2,65 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// void merge(int *arr , int i , int j ){
+//     int mid = (i +j )>>1;
+//     int len1 = mid - i + 1;
+//     int len2 = j - (mid +1) + 1;
+//     int * arr1 = new int[len1];
+//     int * arr2 = new int[len2];
+    
+    
+    
+    
+    
+//     int k = i;
+//     for(int z = 0; z< len1; z++)arr1[z] = arr[k++];
+//     k = mid +1 ;
+//     for(int z = 0; z< len2; z++)arr2[z] = arr[k++]; 
+//     // merge
+
+
+
+
+//     int index1= 0 , index2 = 0 ; k = i;
+//     while(index1 < len1 and index2 < len2){
+//         if(arr1[index1] < arr2[index2]){
+//             arr[k++] = arr1[index1++ ];
+//         }else{
+//             arr[k++] = arr2[index2++]; 
+//         }
+//     }
+//     while(index1 < len1){
+//         arr[k++] = arr1[index1++];
+//     }
+//     while(index2 < len2){
+//         arr[k++] = arr2[index2++];
+//     }
+
+//     delete arr1 ; delete arr2;
+
+
+
+// }
 void merge(int *arr , int i , int j ){
-    int mid = (i +j )>>1;
-    int len1 = mid - i + 1;
-    int len2 = j - (mid +1) + 1;
-    int * arr1 = new int[len1];
-    int * arr2 = new int[len2];
-    
-    
-    
-    
-    
+    int mid= (i+j)/2;
+    int len1 = mid - i +1 ;
+    int len2 = j - mid;
+    vector<int > ans1(len1 , 0) , ans2(len2 , 0);
     int k = i;
-    for(int z = 0; z< len1; z++)arr1[z] = arr[k++];
-    k = mid +1 ;
-    for(int z = 0; z< len2; z++)arr2[z] = arr[k++]; 
-    // merge
+    for(int h = 0;h < len1; h++)ans1[h] = arr[k++];
+    int k = mid +1 ;
+    for(int h = 0;h < len2; h++)ans2[h] = arr[k++];
 
-
-
-
-    int index1= 0 , index2 = 0 ; k = i;
+    int index1 = 0, index2 = 0; k = i;
     while(index1 < len1 and index2 < len2){
-        if(arr1[index1] < arr2[index2]){
-            arr[k++] = arr1[index1++ ];
-        }else{
-            arr[k++] = arr2[index2++]; 
-        }
+        if(ans1[index1] < ans2[index2])arr[k++] = ans1[index1++];
+        else arr[k++] = ans2[index2++];
     }
-    while(index1 < len1){
-        arr[k++] = arr1[index1++];
-    }
-    while(index2 < len2){
-        arr[k++] = arr2[index2++];
-    }
+    while(index1 < len1)arr[k++] = ans1[index1++];
+    while(index1 < len1)arr[k++] = ans1[index1++];
 
-    delete arr1 ; delete arr2;
+
 
 
 

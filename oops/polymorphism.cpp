@@ -65,12 +65,13 @@ class Dog: public Animal {
 
 int main() {
 
-    // Dog obj;
-    // obj.speak();
+    Dog obj;
+    obj.speak();
 
 
 
-
+    A ishan;
+    ishan.sayHello("isha");
 
     B obj1, obj2;
 

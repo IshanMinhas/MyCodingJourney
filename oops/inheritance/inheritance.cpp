@@ -2,13 +2,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Human{
-    private: 
+     public:
     int weight;
     int height;
     int age;
-    public:
+
     int getAge(){
         return this->age;
+    }
+    int getweight(){
+        return this->weight;
     }
     void setWeight(int weight){
         this->weight = weight;
@@ -32,5 +35,5 @@ int main(){
     cout << m1.color << endl;
     m1.sleep();
     m1.setWeight(84);
-    cout << m1.getAge()<< endl;
+    cout << m1.getweight()<< endl;
 }

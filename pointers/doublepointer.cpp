@@ -19,43 +19,43 @@ void update(int **p2) {
     }
 int main() {
 
-    int i = 5;
-    int* p = &i;
-    int** p2 = &p;
+    // int i = 5;
+    // int* p = &i;
+    // int** p2 = &p;
 
-    cout<< endl << endl <<" Sab sahi chal rha h " << endl << endl ;
+    // cout<< endl << endl <<" Sab sahi chal rha h " << endl << endl ;
 
-    cout << i << endl;
-    cout << *p << endl;
-    cout << **p2 << endl;
+    // cout << i << endl;
+    // cout << *p << endl;
+    // cout << **p2 << endl;
 
-    cout << &i << endl;
-    cout << p << endl;
-    cout << *p2 << endl;
+    // cout << &i << endl;
+    // cout << p << endl;
+    // cout << *p2 << endl;
 
-    cout << &p << endl;
-    cout << p2 << endl;
+    // cout << &p << endl;
+    // cout << p2 << endl;
 
-    cout << endl << endl;
-    cout<< "before " << i << endl;
-    cout<< "before " << p << endl;
-    cout<< "before " << p2 << endl;
-    update(p2);
-    cout<< "after " << i << endl;
-    cout<< "after " << p << endl;
-    cout<< "after " << p2 << endl;
-    cout << endl << endl;
+    // cout << endl << endl;
+    // cout<< "before " << i << endl;
+    // cout<< "before " << p << endl;
+    // cout<< "before " << p2 << endl;
+    // update(p2);
+    // cout<< "after " << i << endl;
+    // cout<< "after " << p << endl;
+    // cout<< "after " << p2 << endl;
+    // cout << endl << endl;
     
 
 
 
 
-        // int num = 110;
-        // int *ptr = &num;
-        // int ** ptr2 = &ptr;
-        // // update(ptr);
-        // //increment(ptr2);
-        // cout << num << endl;
+        int num = 110;
+        int *ptr = &num;
+        int ** ptr2 = &ptr;
+        update(ptr); // 220
+        increment(ptr2); // 221
+        cout << num << endl;
 
 
 

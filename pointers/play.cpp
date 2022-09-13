@@ -10,7 +10,7 @@ int main () {
 
     //cout << *p << endl;
 
-    /*
+   /* 
     int i = 5;
 
     int *q = &i;
@@ -22,7 +22,7 @@ int main () {
 
     cout << p << endl;
     cout << *p << endl;
-    */
+   */ 
 
    int num = 5;
    int a = num;
@@ -44,7 +44,7 @@ int main () {
    //important concept
    int i = 3;
    int *t = &i;
-   cout <<  (*t)++ << endl;
+   cout <<  ++(*t) << endl;
    *t = *t +1;
     cout << *t << endl;
     cout << " before t " << t << endl;

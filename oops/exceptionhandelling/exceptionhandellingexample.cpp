@@ -17,7 +17,7 @@ public:
         int reqPaper = textdoc.size()/10; //if 40 char then we will need 4 paper toprint the doc
         // if(reqPaper > availablePaper)throw "Error , not enough paper";
         // throw is gonna break the excetion of the fnc
-         if(reqPaper > availablePaper)throw "ERROR";
+         if(reqPaper > availablePaper)throw 101;
 
         cout << " Printing ... " << textdoc <<endl;
         availablePaper -= reqPaper;

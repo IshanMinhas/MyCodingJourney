@@ -23,6 +23,7 @@ class Hero{
     Hero(int health){
         cout << "this ->" <<this <<endl; 
         this->health = health; // this points to Ramesh object and we want the new health from the func to be the health of ramesh 
+        cout << (*this).health <<endl;
     }
     Hero(int health, char level){
         cout << "this ->" <<this <<endl;
@@ -84,32 +85,32 @@ int Hero:: timetoComplete = 5;
 
 
 int main(){
-    // //static data member can be accesesd without craeting obj
-    // cout << Hero::timetoComplete << endl;
-    // // with creating obj
-    // Hero h1;
-    // cout << h1.timetoComplete <<endl;
-    // Hero h2;
-    // h2.timetoComplete= 40;
-    // cout << h2.timetoComplete <<endl;
-    // cout << h1.timetoComplete <<endl;
+    //static data member can be accesesd without craeting obj
+//     cout << Hero::timetoComplete << endl;
+//     // with creating obj
+//     Hero h1;
+//     cout << h1.timetoComplete <<endl;
+//     Hero h2;
+//     h2.timetoComplete= 40;
+//     cout << h2.timetoComplete <<endl;
+//     cout << h1.timetoComplete <<endl;
 
 
 
 
-    // destructor only called once for an object
-   Hero a;
-    Hero* b  =new Hero();
-    // manually call destructor for dynamic craeted object but not for static craeted object
-    delete b;
+//     destructor only called once for an object
+//    Hero a;
+//     Hero* b  =new Hero();
+//     manually call destructor for dynamic craeted object but not for static craeted object
+//     delete b;
 
 
-    return 0;
+//     return 0;
 
 
 
 
-//   // copy assignment operator
+//   copy assignment operator
 //     Hero hero1(20 , 'c');
 //     Hero hero(10 , 'a');
 //     hero1.print(); hero.print();
@@ -125,7 +126,7 @@ int main(){
 
   
   
-    //  shallow and deep copy constructor
+    // shallow and deep copy constructor
     // Hero hero1;
     // hero1.setHealth(50);
     // hero1.setlevel('H');
@@ -146,13 +147,13 @@ int main(){
      
     
 
-    // Copy CONSTRUCTOR
-    // Hero suresh(70 , 'S');
-    // suresh.print(); 
-    // copy constructor
-    // Hero R(suresh);
-    // this means create object R and copy all vaalues of suresh in it
-    // R.print();
+//     //Copy CONSTRUCTOR
+//     Hero suresh(70 , 'S');
+//     suresh.print(); 
+//    // copy constructor
+//     Hero R(suresh);
+//     //this means create object R and copy all vaalues of suresh in it
+//     R.print();
 
 
 
@@ -162,19 +163,20 @@ int main(){
 
 
     
-    // //CONSTRUCTOR
-    // // object static created
-    // Hero ramesh;
-    // ramesh.print();
-    // // calling param construc
-    // Hero ramesh1(10);
-    // ramesh1.print();
-    // cout << "address of ramesh1 " << &ramesh << endl;
-    // // dynmic
-    // Hero *h = new Hero(11);
-    // h->print();
-    // Hero temp(10 , 't' );
-    // temp.print();
+//   //  CONSTRUCTOR
+//    // object static created
+//     Hero ramesh;
+//     ramesh.print();
+//     // calling param construc
+//     Hero ramesh1(10);
+//     ramesh1.print();
+//     cout << "address of ramesh1 " << &ramesh1 << endl;
+//     // dynmic
+//     Hero *h = new Hero(11);
+//     // h->print();
+//     Hero temp(10 , 't' );
+//     temp.print();
+//     delete h ;
 
 
 
@@ -187,33 +189,36 @@ int main(){
 
 
 
-//     // creation of objct static allocation
-//     Hero h1;
-//     // dynammic
-//     Hero *b  = new Hero;
+    // // creation of objct static allocation
+    // Hero h1;
+    // // dynammic
+    // Hero *b  = new Hero;
+    // Hero * c = new Hero();
 
-//     // use getter
-//     cout << "gethealth h1 " << h1.getHealth() << endl;
-//     // use setter
-//     h1.setHealth(20) ;  
-//     h1.level = 'a';
+    // // use getter
+    // cout << "gethealth h1 " << h1.getHealth() << endl;
+    // cout << b->level <<endl;
+    // // use setter
+    // h1.setHealth(20) ;  
+    // h1.level = 'a';
 
-//     // for h1
-//     cout << "Health is " << h1.getHealth() << endl;
-//     cout << "Level  is " << h1.level << endl;
+    // // for h1
+    // cout << "Health is " << h1.getHealth() << endl;
+    // cout << "Level  is " << h1.level << endl;
     
-//     // for b
-//     b->level = 'B';
-//     (*b).setHealth(50);
-//     cout << "Health is " << (*b).getHealth() << endl;
-//     cout << "Level  is " << (*b).level << endl;
+    // // for b
+    // b->level = 'B';
+    // (*b).setHealth(50);
+    // cout << "Health is " << (*b).getHealth() << endl;
+    // cout << "Level  is " << (*b).level << endl;
 
-//     // or 
+    // // or 
     
-//     cout << "Health is " << b->getHealth() << endl;
-//     cout << "Level  is " << b->level  << endl;
+    // cout << "Health is " << b->getHealth() << endl;
+    // cout << "Level  is " << b->level  << endl;
+    // cout << (*c).getHealth() <<  " " << c->getHealth() << endl;
+    // delete b ; delete c ;
 
-// 
 }
 
 
@@ -223,63 +228,66 @@ int main(){
 
 
 
-/*
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
 
-class Animal{
-    private : 
-    int sing;
-    int legs;
-    bool bark;
+// class Animal{
+//     private : 
+//     int sing;
+//     int legs;
+//     bool bark;
+//     public:
+//     Animal(int sing, int legs, bool bark){
+//             this->sing = sing;
+//             this->legs = legs;
+//             this->bark = bark;
+//             cout << this <<endl;
+//             cout << (*this).sing <<endl;
+//             cout <<this->legs <<endl;
+//     }
 
-    public:
-    void print(){
-        cout << legs <<endl;
-    }
+//     public:
+//     void print(){
+//         cout << legs <<endl;
+//     }
 
-    int getLegs(){
-       return legs;
-    }
+//     int getLegs(){
+//        return legs;
+//     }
 
-    bool isBark(){
-        return bark;
-    }
+//     bool isBark(){
+//         return bark;
+//     }
 
-    void setLegs(int l){
-        legs = l;
-    }
-    void setBark(bool x){
-        bark = x;
-    }
+//     void setLegs(int l){
+//         legs = l;
+//     }
+//     void setBark(bool x){
+//         bark = x;
+//     }
  
-};
-class Dog : public Animal {
-    public:
+// };
+// class Dog : public Animal {
+//     public:
    
-    void Origins(){
-        cout << "Germany" <<endl;
-    }
+//     void Origins(){
+//         cout << "Germany" <<endl;
+//     }
 
-};
-
-
-
-
-
-int main(){
-    Dog Doggy ;
-    Doggy.setBark(true);
-    Doggy.setLegs(4);
-    Doggy.Origins(); 
-    cout << Doggy.isBark() <<endl;
-    cout << Doggy.getLegs() <<endl;  
+// };
 
 
 
 
 
+// int main(){
+//     Animal Doggy(1, 2, true) ;
 
-}
-*/
+//    // Doggy.setBark(true);
+//    // Doggy.setLegs(4);
+//    // Doggy.Origins(); 
+//     cout << Doggy.isBark() <<endl;
+//     cout << Doggy.getLegs() <<endl;  
+
+// }

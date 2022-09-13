@@ -32,7 +32,7 @@ int main() {
 
     char temp = 'z';
     char *p = &temp;
-
+    // it will print till it encounters null ptr
     cout << p << endl;
 
 

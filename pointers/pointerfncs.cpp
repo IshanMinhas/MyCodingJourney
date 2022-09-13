@@ -31,11 +31,11 @@ int main() {
     int value = 5;
     int *p = &value;
 
-    //print(p);
+    print(p);
     cout <<" Before " << *p << endl;
     update(p);
-    cout <<" After " << *p << endl;
-    */
+    cout <<" After " << *p << endl;*/
+    
 
     int arr[6] = {1,2,3,4,5,8};
 

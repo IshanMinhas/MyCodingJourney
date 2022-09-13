@@ -17,7 +17,7 @@ using namespace std;
 //     double getter(){
 //         return area;
 //     }
-//     friend class Homework ;
+//     friend void Print(EquilateralTriangle x);
 
 // };
 
@@ -25,7 +25,7 @@ using namespace std;
 
 
 
-// FRIEND FUNC
+// //FRIEND FUNC
 // void Print(EquilateralTriangle x){
 //     cout << x.sidelen << endl;
 // }
@@ -36,13 +36,13 @@ using namespace std;
 
 
 
-// FRIEND CLASS
-// class Homework{
-// public:
-//     void Print(EquilateralTriangle x){
-//              cout << x.sidelen << endl;
-//      } 
-// };
+// // //FRIEND CLASS
+// // class Homework{
+// // public:
+// //     void Print(EquilateralTriangle x){
+// //              cout << x.sidelen << endl;
+// //      } 
+// // };
 
 
 
@@ -52,13 +52,13 @@ using namespace std;
 //     EquilateralTriangle s1;
 //     s1.setEquiTri(3);
 //     cout << s1.getter() <<endl;
-//     Homework s2;
-//     s2.Print(s1);
+//     // Homework s2;
+//     // s2.Print(s1);
     
     
     
     
-//     Friend FNC
+//    // Friend FNC
 //     Print(s1);
 
 // }
@@ -70,8 +70,8 @@ using namespace std;
 
 
 
-//----------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------
+// //----------------------------------------------------------------------------------------
+// //----------------------------------------------------------------------------------------
 
 
 
@@ -94,7 +94,7 @@ class Instrument{
 
 class Guitar : public Instrument{
     public:  
-    virtual void MakeSound(){
+     void MakeSound(){
         cout << "JAMAJAM" <<endl;
     }
 };
